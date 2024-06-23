@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mi Casa</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/dash.css') }}">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Stylesheet
+    ================================================== -->
+    <link rel="stylesheet" type="text/css" href="../static/css/dash.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/nivo-lightbox/">
+    <link rel="stylesheet" type="text/css" href="../static/css/nivo-lightbox/nivo-lightbox.css">
+    <link href="../https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <!-- Navigation
+    ==========================================-->
+    <nav id="menu" class="navbar navbar-default navbar-fixed-top">
+        <div class="container aziz">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <a href="#page-top"><img  src="../static/img/logo.png" alt="" srcset=""></a>
+                
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class=" navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#about" class="page-scroll">About</a></li>
+                    <li><a href="#services" class="page-scroll">Services</a></li>
+                    <li><a href="#contact" class="page-scroll">Contact</a></li>
+                    <li><a href="/buy/house" class="page-scroll">Buy</a></li>
+                    <li><a href="/rent/house" class="page-scroll">Rent</a></li>
+                    <li><a href="/sell/house" class="page-scroll">Sell or Rent</a></li>
+                    <li><a href="/mortgage/house" class="page-scroll">Mortgage</a></li>
+                    <li><a href="/house/{{session['user_id']}}" class="page-scroll">{{session['username']}}'s Houses</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+    </nav>
+    <!-- Header -->
+    <header id="header">
+        <div class="intro">
+            <div class="overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2 intro-text">
+                            <h1>Discover your dream home with <br>
+                                Housify</h1>
+                            <p>where seamless real estate solutions meet your buying, renting, and mortgage needs in one
+                                centralized platform.</p>
+                            <a href="#about" class="btn btn-custom btn-lg page-scroll">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- About Section -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-6"> <img src="../static/img/about.jpg" class="img-responsive" alt="">
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <div class="about-text">
+                        <h2>Who We Are</h2>
+                        <p>Are you ready to turn your real estate dreams into reality? 
+                            Look no further than DreamHomeFinder.com, your premier destination for all things real estate. Whether you're buying,
+                            selling, renting, or just exploring the market, we've got you covered.</p>
+                        <h3>Why Choose Us?</h3>
+                        <div class="list-style">
+                            <div class="col-lg-6 col-sm-6 col-xs-12">
+                                <ul>
+                                    <li>Years of Experience</li> 
+                                    <li>Fully Insured</li>
+                                    <li>Cost Control Experts</li>
+                                    <li>100% Satisfaction Guarantee</li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6 col-sm-6 col-xs-12">
+                                <ul>
+                                    <li>Free Consultation</li>
+                                    <li>Satisfied Customers</li>
+                                    <li>Project Management</li>
+                                    <li>Affordable Pricing</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Services Section -->
+    <div id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="service-media"> <img src="../static/img/intro-bg.jpg" alt=" "> </div>
+                    <div class="service-desc">
+                        <h3>Rentals</h3>
+                        <p>Explore a wide range of rental properties that suit your preferences and needs. Find your
+                            perfect home for a temporary stay with our hassle-free rental services.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-media"> <img src="../static/img/services/service-2.jpg" alt=" "> </div>
+                    <div class="service-desc">
+                        <h3>Real Estate Purchase</h3>
+                        <p>Embark on the journey of homeownership with our dedicated buying services. Discover and
+                            acquire your dream home with the help of our experienced real estate professionals.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-media"> <img src="../static/img/services/service-3.jpg" alt=" "> </div>
+                    <div class="service-desc">
+                        <h3>Mortgage Solutions</h3>
+                        <p>Secure the financing you need to make your real estate dreams a reality. Our mortgage
+                            services provide tailored solutions to fit your financial goals and aspirations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Contact Section -->
+    <div id="contact">
+        <div class="container">
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="section-title">
+                        <h2>Get In Touch</h2>
+                        <p>Please fill out the form below to send us an email and we will get back to you as soon as
+                            possible.</p>
+                    </div>
+                    <form name="sentMessage" id="contactForm" novalidate>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" id="name" class="form-control" placeholder="Name"
+                                        required="required">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="email" id="email" class="form-control" placeholder="Email"
+                                        required="required">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" id="message" class="form-control" rows="4" placeholder="Message"
+                                required></textarea>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div id="success"></div>
+                        <button type="submit" class="btn btn-custom btn-lg">Send Message</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-3 col-md-offset-1 contact-info">
+                <div class="contact-item">
+                    <h4>Contact Info</h4>
+                    <p><span>Address</span>Coding Dojo,                </div>
+                <div class="contact-item">
+                    <p><span>Phone</span> +999999999999</p>
+                </div>
+                <div class="contact-item">
+                    <p><span>Email</span> info@company.com</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script type="text/javascript" src="../static/scripts/jquery.1.11.1.js"></script>
+    <script type="text/javascript" src="../static/scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../static/scripts/SmoothScroll.js"></script>
+    <script type="text/javascript" src="../static/scripts/nivo-lightbox.js"></script>
+    <script type="text/javascript" src="../static/scripts/jqBootstrapValidation.js"></script>
+    <script type="text/javascript" src="../static/scripts/bootstrap.js"></script>
+    <script type="text/javascript" src="../static/scripts/dashboard.js"></script>
+</body>
+
+</html>

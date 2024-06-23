@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell/Rent</title>
+    <!-- Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <form id="property-form" action="/create/house/sell" method="post">
+            <h2>Put A House In Display for {{session.username}}</h2>
+            <div class="form-group">
+                <input type="hidden" name="type" value="sale">
+            </div>
+            </div>
+            <div class="form-group">
+                <label for="property-type">Can it be bought with mortgage :</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="mortage_validation" 
+                        value="1" checked>
+                    <label class="form-check-label">
+                        With mortgage
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="mortage_validation"
+                        value="0" checked>
+                    <label class="form-check-label">
+                        Without mortgage
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="bathroom"> How much mortgage monthly:</label>
+                <input type="number" class="form-control w-50" id="mortage_monthly" name="mortage_monthly" min="1"
+                    placeholder="Enter mothly rent or mortgage">
+                </div>
+            <div class="form-group">
+                <label for="house-type">House Type:</label>
+                <select class="form-control" id="house-type" name="house_type">
+                    <option value="appartment">Appartment</option>
+                    <option value="house">House</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="location">Location:</label>
+                <select class="form-control" id="location" name="location">
+                    <option value="Tunis">Tunis</option>
+                    <option value="Ariana"> Ariana</option>
+                    <option value="Beja"> Beja</option>
+                    <option value="Ben Arous"> Ben Arous</option>
+                    <option value="Bizerte"> Bizerte</option>
+                    <option value="Gabes"> Gabes</option>
+                    <option value="Gafsa"> Gafsa</option>
+                    <option value="Jendouba"> Jendouba</option>
+                    <option value="Kairouan"> Kairouan</option>
+                    <option value="Kasserine"> Kasserine</option>
+                    <option value="kebili"> kebili</option>
+                    <option value="Kef"> Kef</option>
+                    <option value="Mahdia"> Mahdia</option>
+                    <option value="Manouba"> Manouba</option>
+                    <option value="Mednine"> Mednine</option>
+                    <option value="Monastir"> Monastir</option>
+                    <option value="Nabeul"> Nabeul</option>
+                    <option value="Sfax"> Sfax</option>
+                    <option value="Sidi Bouzid"> Sidi Bouzid</option>
+                    <option value="Siliana"> Siliana</option>
+                    <option value="Sousse"> Sousse</option>
+                    <option value="Tataouine"> Tataouine</option>
+                    <option value="Tozeur"> Tozeur</option>
+                    <option value="Zaghouan"> Zaghouan</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="bathroom">Bathrooms:</label>
+                <input type="number" class="form-control w-50" id="bathroom" name="bathroom" min="1"
+                    placeholder="Enter number of bathrooms">
+            </div>
+
+            <div class="form-group">
+                <label id="price-label" for="price">Price:</label>
+                <input type="number" class="form-control w-50" id="price" name="price" min="100"
+                    placeholder="Enter price">
+            </div>
+
+            <div class="form-group">
+                <label for="bedrooms">Number of Bedrooms:</label>
+                <input type="number" class="form-control w-50" id="bedrooms" name="beds" min="0"
+                    placeholder="Enter number of bedrooms">
+            </div>
+
+            <div class="form-group">
+                <label for="surface">Surface:</label>
+                <input type="number" class="form-control w-50" id="surface" name="surface" min="0"
+                    placeholder="Enter number of surface">
+            </div>
+            <div class="form-group">
+                <label for="surface">Description:</label>
+                <textarea class="form-control" id="surface" name="description" rows="3"></textarea>
+            </div>
+
+
+            <button class="btn btn-danger">Submit</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js scripts -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
